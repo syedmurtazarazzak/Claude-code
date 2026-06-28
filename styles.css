@@ -77,8 +77,8 @@ section{padding:110px 0;position:relative}
 /* eyebrow / title / sub  (new + legacy) */
 .eyebrow,.sec-label{display:inline-flex;align-items:center;gap:9px;font-family:"JetBrains Mono",monospace;font-size:11.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--p);margin-bottom:20px}
 .eyebrow::before,.sec-label::before{content:"";width:26px;height:1px;background:linear-gradient(90deg,var(--p),transparent)}
-h2.title,h2.sec-title{font-family:"Syne",sans-serif;font-weight:800;font-size:clamp(32px,4.6vw,56px);line-height:1.05;letter-spacing:-.03em;color:var(--tx)}
-h2.title em,h2.sec-title em{font-style:normal;background:linear-gradient(115deg,var(--g),var(--g2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+h1.sec-title,h2.title,h2.sec-title{font-family:"Syne",sans-serif;font-weight:800;font-size:clamp(32px,4.6vw,56px);line-height:1.05;letter-spacing:-.03em;color:var(--tx)}
+h1.sec-title em,h2.title em,h2.sec-title em{font-style:normal;background:linear-gradient(115deg,var(--g),var(--g2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .sub,.sec-sub{margin-top:18px;font-size:17.5px;color:var(--mu);max-width:600px;line-height:1.75}
 
 /* ---------- BUTTONS (new + legacy) ---------- */
