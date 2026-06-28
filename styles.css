@@ -44,7 +44,7 @@ button{cursor:pointer;font-family:inherit;border:none;outline:none;background:no
 
 /* ---------- NAV ---------- */
 nav{position:fixed;top:0;left:0;right:0;z-index:120;padding:0 5vw;transition:.4s var(--ease)}
-nav.scrolled{background:rgba(5,5,6,.7);backdrop-filter:blur(20px) saturate(140%);border-bottom:1px solid var(--bd)}
+nav.scrolled{background:rgba(5,5,6,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd)}
 .nav-inner{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:78px;transition:.4s var(--ease)}
 nav.scrolled .nav-inner{height:64px}
 .nav-logo img{height:40px;width:auto;filter:brightness(1.12) drop-shadow(0 0 1px rgba(255,255,255,.06));transition:.3s var(--ease)}
@@ -113,7 +113,7 @@ h1.sec-title em,h2.title em,h2.sec-title em{font-style:normal;background:linear-
 .page-hero h1,.page-hero h2{margin-top:0}
 
 /* hero dashboard card */
-.hcard{position:relative;background:linear-gradient(165deg,rgba(16,18,26,.85),rgba(8,9,13,.9));border:1px solid var(--bd2);border-radius:var(--rad-xl);overflow:hidden;box-shadow:0 40px 90px -30px rgba(0,0,0,.8);backdrop-filter:blur(14px);opacity:0;transform:translateY(50px) scale(.95);animation:cardIn 1.1s var(--ease) .5s forwards}
+.hcard{position:relative;background:linear-gradient(165deg,rgba(16,18,26,.92),rgba(8,9,13,.95));border:1px solid var(--bd2);border-radius:var(--rad-xl);overflow:hidden;box-shadow:0 40px 90px -30px rgba(0,0,0,.8);backdrop-filter:blur(6px);opacity:0;transform:translateY(50px) scale(.95);animation:cardIn 1.1s var(--ease) .5s forwards}
 @keyframes cardIn{to{opacity:1;transform:none}}
 .hcard.float{animation:cardIn 1.1s var(--ease) .5s forwards,floaty 7s ease-in-out 1.6s infinite}
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
@@ -354,6 +354,9 @@ footer{border-top:1px solid var(--bd);padding:50px 0;background:rgba(5,5,6,.5)}
 
 /* ---------- RESPONSIVE ---------- */
 @media(max-width:980px){
+  .aurora{filter:blur(46px);opacity:.55}
+  .aurora b{animation:none!important}
+  .noise-fx{display:none}
   .hero-grid{grid-template-columns:1fr;gap:54px}
   .svc-grid,.svc-overview-grid{grid-template-columns:1fr}
   .proof-grid{grid-template-columns:repeat(2,1fr)}
