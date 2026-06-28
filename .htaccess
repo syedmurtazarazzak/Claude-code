@@ -1,6 +1,49 @@
-# ============================================================
-#  Cyber Design — performance (.htaccess for DirectAdmin/Apache)
-# ============================================================
+DirectoryIndex index.html
+Options -Indexes
+RewriteEngine On
+
+# ── Core pages ───────────────────────────────────────────────────────────────
+RewriteRule ^about-us/?$ /about-us.html [R=301,L]
+RewriteRule ^about/?$ /about-us.html [R=301,L]
+RewriteRule ^services/?$ /services.html [R=301,L]
+RewriteRule ^case-studies/?$ /case-studies.html [R=301,L]
+RewriteRule ^contact/?$ /contact.html [R=301,L]
+RewriteRule ^contact-us/?$ /contact.html [R=301,L]
+
+# ── Service pages ─────────────────────────────────────────────────────────────
+RewriteRule ^meta-ads-agency-karachi/?$ /meta-ads-agency-karachi.html [R=301,L]
+RewriteRule ^shopify-development-karachi/?$ /shopify-development-karachi.html [R=301,L]
+RewriteRule ^branding-agency-karachi/?$ /branding-agency-karachi.html [R=301,L]
+RewriteRule ^creative-photography-karachi/?$ /creative-photography-karachi.html [R=301,L]
+
+# ── Old WordPress pages ───────────────────────────────────────────────────────
+RewriteRule ^our-approach/?$ /about-us.html [R=301,L]
+RewriteRule ^our-story/?$ /about-us.html [R=301,L]
+RewriteRule ^team/?$ /about-us.html [R=301,L]
+RewriteRule ^portfolio-category/.*$ /case-studies.html [R=301,L]
+RewriteRule ^portfolio/?$ /case-studies.html [R=301,L]
+RewriteRule ^portfolio/.*$ /case-studies.html [R=301,L]
+RewriteRule ^our-work/?$ /case-studies.html [R=301,L]
+RewriteRule ^work/?$ /case-studies.html [R=301,L]
+RewriteRule ^food-photography/?$ /creative-photography-karachi.html [R=301,L]
+RewriteRule ^product-photography/?$ /creative-photography-karachi.html [R=301,L]
+RewriteRule ^photography/?$ /creative-photography-karachi.html [R=301,L]
+RewriteRule ^videography/?$ /creative-photography-karachi.html [R=301,L]
+RewriteRule ^social-media/?$ /meta-ads-agency-karachi.html [R=301,L]
+RewriteRule ^digital-marketing/?$ /meta-ads-agency-karachi.html [R=301,L]
+RewriteRule ^facebook-ads/?$ /meta-ads-agency-karachi.html [R=301,L]
+RewriteRule ^web-design/?$ /shopify-development-karachi.html [R=301,L]
+RewriteRule ^web-development/?$ /shopify-development-karachi.html [R=301,L]
+RewriteRule ^ecommerce/?$ /shopify-development-karachi.html [R=301,L]
+RewriteRule ^shopify/?$ /shopify-development-karachi.html [R=301,L]
+RewriteRule ^branding/?$ /branding-agency-karachi.html [R=301,L]
+RewriteRule ^logo-design/?$ /branding-agency-karachi.html [R=301,L]
+RewriteRule ^blog/?.*$ / [R=301,L]
+RewriteRule ^blog$ / [R=301,L]
+
+# ============================================================================
+#  PERFORMANCE — caching + compression (added; does NOT affect redirects above)
+# ============================================================================
 
 # ---------- GZIP / Brotli compression ----------
 <IfModule mod_deflate.c>
@@ -25,20 +68,16 @@
 # ---------- Browser caching (Expires) ----------
 <IfModule mod_expires.c>
   ExpiresActive On
-  # Images & icons — rarely change
   ExpiresByType image/webp        "access plus 1 year"
   ExpiresByType image/png         "access plus 1 year"
   ExpiresByType image/jpeg        "access plus 1 year"
   ExpiresByType image/gif         "access plus 1 year"
   ExpiresByType image/svg+xml     "access plus 1 year"
   ExpiresByType image/x-icon      "access plus 1 year"
-  # Fonts
   ExpiresByType font/woff2        "access plus 1 year"
   ExpiresByType font/woff         "access plus 1 year"
-  # CSS & JS (versioned via ?v= for cache-busting)
   ExpiresByType text/css          "access plus 1 year"
   ExpiresByType application/javascript "access plus 1 year"
-  # HTML — always revalidate so content updates are seen
   ExpiresByType text/html         "access plus 0 seconds"
 </IfModule>
 
@@ -50,7 +89,6 @@
   <FilesMatch "\.(html|htm)$">
     Header set Cache-Control "no-cache, must-revalidate"
   </FilesMatch>
-  # Remove ETag (use Cache-Control instead)
   Header unset ETag
 </IfModule>
 FileETag None
