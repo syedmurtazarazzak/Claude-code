@@ -11,7 +11,7 @@ html{scroll-behavior:smooth}
   --bd:rgba(255,255,255,.08);--bd2:rgba(255,255,255,.14);
   --p:#FF2D3F;--p2:#DA1F2C;--ph:#FF3344;--p-soft:rgba(255,45,63,.14);--p-glow:rgba(255,45,63,.45);
   --g:#00E08C;--g2:#19FFA3;--vi:#7C5CFF;--cy:#22D3EE;
-  --tx:#F4F6FC;--mu:#9AA4C0;--mu2:#5A6585;
+  --tx:#F4F6FC;--mu:#A6B0CC;--mu2:#828DAD;
   --rad:16px;--rad-lg:22px;--rad-xl:30px;
   --ease:cubic-bezier(0.16,1,0.3,1);--ease-out:cubic-bezier(0.22,1,0.36,1);
   --maxw:1220px;
