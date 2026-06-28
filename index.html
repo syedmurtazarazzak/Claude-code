@@ -16,8 +16,11 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Cyber Design — Meta Ads & Shopify Growth Agency Karachi | Up to 11× ROAS">
 <meta name="twitter:description" content="Pakistan's performance Meta ads agency. PKR 160M+ managed, 295K+ purchases, up to 11× ROAS — verified. Free 15-min audit. Karachi.">
-<link rel="icon" type="image/webp" href="cyberdesign-logo.webp">
-<link rel="apple-touch-icon" href="cyberdesign-logo.webp">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="icon" type="image/webp" href="cyberdesign-favicon.webp">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
 <script type="application/ld+json">{
   "@context":"https://schema.org",
   "@type":["MarketingAgency","LocalBusiness"],
@@ -33,7 +36,8 @@
 }</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:ital@1&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Playfair+Display:ital@1&display=swap">
+<link rel="stylesheet" href="styles.css">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-51XB3NVH1X"></script>
 <script>
@@ -42,505 +46,230 @@
   gtag('js', new Date());
   gtag('config', 'G-51XB3NVH1X');
 </script>
-<style>
-/* ============================================================
-   CYBER DESIGN — Editorial Brutalism (UUPM)
-   Paper + Ink + Vermillion · type-as-hero · hard borders
-   ============================================================ */
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-:root{
-  --paper:#F3F0E7;--paper2:#EAE6D9;--ink:#0E0E0E;--ink2:#1A1A1A;
-  --red:#E1251B;--red2:#FF3B23;
-  --mut:#6B675C;--line:#0E0E0E;
-  --shadow:6px 6px 0 var(--ink);
-  --shadow-red:6px 6px 0 var(--red);
-  --maxw:1280px;
-  --ease:cubic-bezier(0.2,0.9,0.25,1);
-}
-body{font-family:"Inter",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:16px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
-img{max-width:100%;display:block}
-a{text-decoration:none;color:inherit}
-button{cursor:pointer;font-family:inherit;border:none;background:none}
-::selection{background:var(--red);color:#fff}
-.mono{font-family:"JetBrains Mono",monospace}
-
-/* paper grain */
-body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E")}
-.scroll-bar{position:fixed;top:0;left:0;height:4px;width:0;background:var(--red);z-index:300;transition:width .1s linear}
-
-/* ---------------- NAV ---------------- */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:var(--ink);border-bottom:2px solid var(--ink)}
-.nav-in{max-width:var(--maxw);margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between}
-.nav-logo img{height:34px;width:auto}
-.nav-links{display:flex;align-items:center;gap:4px}
-.nav-links a{font-family:"JetBrains Mono",monospace;font-size:12.5px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:#CFC9BB;padding:10px 14px;position:relative;transition:color .15s}
-.nav-links a::after{content:"";position:absolute;left:14px;right:14px;bottom:8px;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .2s var(--ease)}
-.nav-links a:hover,.nav-links a.cur{color:#fff}
-.nav-links a:hover::after,.nav-links a.cur::after{transform:scaleX(1)}
-.nav-cta{margin-left:10px;background:var(--red);color:#fff!important;padding:11px 18px!important;font-weight:700!important;border:2px solid var(--red);transition:.15s}
-.nav-cta::after{display:none!important}
-.nav-cta:hover{background:#fff;color:var(--ink)!important;border-color:#fff}
-.ham{display:none;flex-direction:column;gap:5px;padding:8px}
-.ham span{display:block;width:26px;height:2.5px;background:#fff;transition:.25s var(--ease)}
-.ham.act span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
-.ham.act span:nth-child(2){opacity:0}
-.ham.act span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
-.mob{display:none;position:fixed;inset:68px 0 0;background:var(--ink);z-index:199;padding:24px;flex-direction:column}
-.mob.open{display:flex}
-.mob a{font-family:"Anton",sans-serif;font-size:34px;text-transform:uppercase;color:#fff;padding:16px 0;border-bottom:2px solid #2A2A2A;letter-spacing:.01em}
-.mob a:hover{color:var(--red);padding-left:14px;transition:.2s}
-.mob .mob-cta{color:var(--red)}
-
-/* ---------------- LAYOUT ---------------- */
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;position:relative;z-index:1}
-.sec{padding:96px 0;position:relative;border-bottom:2px solid var(--ink)}
-.sec--ink{background:var(--ink);color:var(--paper);border-bottom:2px solid var(--ink)}
-.sec--red{background:var(--red);color:#fff;border-bottom:2px solid var(--ink)}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;margin-bottom:26px}
-.eyebrow::before{content:"";width:34px;height:2px;background:var(--red)}
-.sec--ink .eyebrow,.sec--red .eyebrow{color:#fff}
-.kicker{font-family:"Anton",sans-serif;text-transform:uppercase;letter-spacing:.005em;line-height:.92;font-weight:400}
-h2.head{font-family:"Anton",sans-serif;text-transform:uppercase;font-size:clamp(40px,7vw,96px);line-height:.9;letter-spacing:.004em;font-weight:400}
-.head .red{color:var(--red)}
-.lead{font-size:19px;line-height:1.6;max-width:620px;color:var(--ink);margin-top:22px}
-.sec--ink .lead{color:#C9C4B6}
-.muted{color:var(--mut)}
-
-/* ---------------- BUTTONS ---------------- */
-.btn{display:inline-flex;align-items:center;gap:10px;font-family:"JetBrains Mono",monospace;font-weight:700;font-size:14px;letter-spacing:.03em;text-transform:uppercase;padding:16px 26px;border:2px solid var(--ink);transition:transform .12s var(--ease),box-shadow .12s var(--ease),background .15s,color .15s;cursor:pointer}
-.btn svg{width:16px;height:16px}
-.btn-red{background:var(--red);color:#fff;border-color:var(--ink);box-shadow:var(--shadow)}
-.btn-red:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--ink)}
-.btn-ink{background:var(--ink);color:#fff;box-shadow:var(--shadow-red)}
-.btn-ink:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--red)}
-.btn-out{background:transparent;color:var(--ink);box-shadow:none}
-.btn-out:hover{background:var(--ink);color:#fff}
-.sec--ink .btn-out{color:#fff;border-color:#fff}
-.sec--ink .btn-out:hover{background:#fff;color:var(--ink)}
-.btn-wa{background:#0E0E0E;color:#fff;border-color:#0E0E0E;box-shadow:var(--shadow-red)}
-.btn-wa:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--red)}
-
-/* ---------------- HERO ---------------- */
-.hero{padding-top:140px;padding-bottom:0}
-.hero-top{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;padding-bottom:22px;border-bottom:2px solid var(--ink)}
-.hero-tag{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:9px}
-.hero-tag .dot{width:9px;height:9px;background:var(--red);border-radius:50%;display:inline-block;animation:blink 1.4s steps(1) infinite}
-@keyframes blink{50%{opacity:.25}}
-.hero-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:0;border-bottom:2px solid var(--ink)}
-.hero-left{padding:44px 44px 44px 0}
-.hero-right{padding:44px 0 44px 44px;border-left:2px solid var(--ink);display:flex;align-items:center}
-.hero h1{font-family:"Anton",sans-serif;text-transform:uppercase;font-size:clamp(52px,9vw,140px);line-height:.85;letter-spacing:.004em;font-weight:400}
-.hero h1 .ln{display:block;overflow:hidden}
-.hero h1 .ln span{display:block;transform:translateY(105%);animation:rise .8s var(--ease) forwards}
-.hero h1 .ln:nth-child(2) span{animation-delay:.08s}
-.hero h1 .ln:nth-child(3) span{animation-delay:.16s}
-.hero h1 .hl{background:var(--red);color:#fff;padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-@keyframes rise{to{transform:none}}
-.hero-sub{margin-top:30px;font-size:19px;line-height:1.6;max-width:540px;color:var(--ink);opacity:0;animation:fade .7s var(--ease) .5s forwards}
-.hero-btns{display:flex;gap:16px;margin-top:34px;flex-wrap:wrap;opacity:0;animation:fade .7s var(--ease) .65s forwards}
-@keyframes fade{to{opacity:1}}
-
-/* receipt card */
-.receipt{width:100%;background:#fff;border:2px solid var(--ink);box-shadow:var(--shadow);font-family:"JetBrains Mono",monospace;opacity:0;transform:translateY(24px);animation:fade .7s var(--ease) .4s forwards,rcards .7s var(--ease) .4s forwards}
-@keyframes rcards{to{transform:none}}
-.rc-top{background:var(--ink);color:#fff;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
-.rc-top .v{display:inline-flex;align-items:center;gap:6px;color:#5BE3A7}
-.rc-top .v::before{content:"";width:7px;height:7px;background:#21D07A;border-radius:50%;animation:blink 1.4s steps(1) infinite}
-.rc-body{padding:20px 18px}
-.rc-title{font-family:"Archivo",sans-serif;font-weight:800;font-size:13px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:14px;color:var(--mut)}
-.rc-row{display:flex;justify-content:space-between;align-items:baseline;padding:11px 0;border-bottom:1.5px dashed #C9C4B6;font-size:13px}
-.rc-row .l{color:var(--mut);text-transform:uppercase;letter-spacing:.03em;font-size:11px}
-.rc-row .n{font-family:"Anton",sans-serif;font-size:24px;letter-spacing:.01em}
-.rc-row.big .n{color:var(--red)}
-.rc-total{display:flex;justify-content:space-between;align-items:baseline;padding-top:16px;margin-top:6px;border-top:2px solid var(--ink)}
-.rc-total .l{font-weight:700;text-transform:uppercase;font-size:12px;letter-spacing:.05em}
-.rc-total .n{font-family:"Anton",sans-serif;font-size:34px;color:var(--red)}
-.rc-foot{padding:12px 18px;border-top:2px dashed #C9C4B6;font-size:10.5px;color:var(--mut);text-align:center;letter-spacing:.05em;text-transform:uppercase}
-
-/* ---------------- MARQUEE ---------------- */
-.marq{background:var(--ink);color:#fff;border-bottom:2px solid var(--ink);overflow:hidden;padding:0}
-.marq-tr{display:flex;width:max-content;animation:scroll 30s linear infinite}
-.marq-tr:hover{animation-play-state:paused}
-.marq-it{font-family:"Anton",sans-serif;text-transform:uppercase;font-size:30px;letter-spacing:.02em;padding:16px 0;display:inline-flex;align-items:center;white-space:nowrap}
-.marq-it span{padding:0 26px}
-.marq-it .st{color:var(--red)}
-.marq-it .sep{color:#3A3A3A}
-@keyframes scroll{to{transform:translateX(-50%)}}
-
-/* ---------------- BIG STATS ---------------- */
-.stats{display:grid;grid-template-columns:repeat(4,1fr)}
-.stat{padding:14px 26px;border-right:2px solid var(--ink)}
-.stat:last-child{border-right:none}
-.stat .n{font-family:"Anton",sans-serif;font-size:clamp(40px,5vw,72px);line-height:.95;letter-spacing:.005em}
-.stat .n .sup{font-size:.4em;vertical-align:super;color:var(--red)}
-.stat .l{font-family:"JetBrains Mono",monospace;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);margin-top:10px}
-.stat.red .n{color:var(--red)}
-
-/* ---------------- SERVICES (index rows) ---------------- */
-.srv{display:block;border-top:2px solid #2A2A2A;position:relative;overflow:hidden;transition:background .2s var(--ease)}
-.srv:last-child{border-bottom:2px solid #2A2A2A}
-.srv-in{display:grid;grid-template-columns:120px 1fr auto;gap:28px;align-items:center;padding:34px 16px;position:relative;z-index:1;transition:transform .25s var(--ease),color .2s,padding .25s var(--ease)}
-.srv-no{font-family:"JetBrains Mono",monospace;font-size:15px;color:var(--red);font-weight:700;letter-spacing:.05em}
-.srv-mid h3{font-family:"Anton",sans-serif;text-transform:uppercase;font-size:clamp(28px,4vw,52px);line-height:.95;letter-spacing:.006em;font-weight:400}
-.srv-mid p{font-size:14.5px;color:#A8A296;max-width:560px;margin-top:10px;line-height:1.6;transition:color .2s}
-.srv-arrow{width:56px;height:56px;border:2px solid #3A3A3A;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;transition:.2s var(--ease)}
-.srv-arrow svg{width:22px;height:22px}
-.srv:hover{background:var(--red)}
-.srv:hover .srv-in{padding-left:34px}
-.srv:hover .srv-no{color:#fff}
-.srv:hover .srv-mid p{color:#FFD9D5}
-.srv:hover .srv-arrow{background:#fff;color:var(--red);border-color:#fff;transform:rotate(-45deg)}
-
-/* ---------------- CASE STUDIES ---------------- */
-.cases{display:grid;grid-template-columns:1fr;gap:0;margin-top:56px;border:2px solid var(--ink)}
-.case{display:grid;grid-template-columns:1fr 1.3fr;border-bottom:2px solid var(--ink);background:#fff}
-.case:last-child{border-bottom:none}
-.case-l{padding:36px;border-right:2px solid var(--ink)}
-.case-tag{font-family:"JetBrains Mono",monospace;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);display:flex;align-items:center;gap:7px;margin-bottom:16px}
-.case-tag svg{width:12px;height:12px}
-.case-l h3{font-family:"Anton",sans-serif;text-transform:uppercase;font-size:clamp(26px,3vw,38px);line-height:.95;letter-spacing:.006em;font-weight:400}
-.case-chips{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
-.case-chips span{font-family:"JetBrains Mono",monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;border:1.5px solid var(--ink);padding:5px 11px;font-weight:500}
-.case-r{display:grid;grid-template-columns:1fr 1fr}
-.cstat{padding:26px 28px;border-right:1.5px solid var(--paper2);border-bottom:1.5px solid var(--paper2)}
-.cstat:nth-child(2n){border-right:none}
-.cstat:nth-child(n+3){border-bottom:none}
-.cstat .n{font-family:"Anton",sans-serif;font-size:34px;line-height:.95;letter-spacing:.01em}
-.cstat .n .g{color:var(--red)}
-.cstat .l{font-family:"JetBrains Mono",monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--mut);margin-top:8px}
-
-/* ---------------- TRUST ---------------- */
-.trust{display:grid;grid-template-columns:repeat(4,1fr);border:2px solid #2A2A2A;margin-top:8px}
-.trust div{padding:28px 22px;border-right:2px solid #2A2A2A}
-.trust div:last-child{border-right:none}
-.trust .tl{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#7E7A6E;margin-bottom:12px}
-.trust .tn{font-family:"Archivo",sans-serif;font-weight:800;font-size:19px}
-.trust .ts{font-size:11.5px;color:#9A9488;margin-top:5px;font-family:"JetBrains Mono",monospace}
-.award{margin-top:28px;border:2px solid var(--red);background:rgba(225,37,27,.08);padding:28px 32px;display:flex;align-items:center;gap:24px}
-.award .ai{width:60px;height:60px;background:var(--red);display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0}
-.award .ai svg{width:30px;height:30px}
-.award .at{font-family:"Archivo",sans-serif;font-weight:800;font-size:18px;text-transform:uppercase;letter-spacing:.01em;margin-bottom:7px}
-.award .ad{font-size:14px;color:#B8B2A6;line-height:1.55}
-
-/* ---------------- TESTIMONIALS ---------------- */
-.tg{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--ink);margin-top:54px}
-.tq{padding:42px 40px;background:#fff}
-.tq:first-child{border-right:2px solid var(--ink)}
-.tq .stars{color:var(--red);font-size:15px;letter-spacing:3px;margin-bottom:20px}
-.tq blockquote{font-family:"Playfair Display",serif;font-style:italic;font-size:23px;line-height:1.5}
-.tq .auth{display:flex;align-items:center;gap:14px;margin-top:26px;padding-top:20px;border-top:2px solid var(--ink)}
-.tq .av{width:48px;height:48px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-family:"Archivo",sans-serif;font-weight:800;font-size:15px;flex-shrink:0}
-.tq .nm{font-family:"Archivo",sans-serif;font-weight:700;font-size:15px}
-.tq .ro{font-family:"JetBrains Mono",monospace;font-size:11.5px;color:var(--mut);margin-top:3px}
-
-/* ---------------- CTA ---------------- */
-.cta-wrap{text-align:center;max-width:900px;margin:0 auto}
-.cta-wrap h2{font-family:"Anton",sans-serif;text-transform:uppercase;font-size:clamp(44px,8vw,120px);line-height:.86;letter-spacing:.005em;color:#fff}
-.cta-wrap p{font-size:19px;color:#fff;opacity:.92;max-width:560px;margin:24px auto 0;line-height:1.55}
-.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:38px}
-.sec--red .btn-ink{box-shadow:6px 6px 0 #fff}
-.sec--red .btn-ink:hover{box-shadow:8px 8px 0 #fff}
-.sec--red .btn-out{border-color:#fff;color:#fff}
-.sec--red .btn-out:hover{background:#fff;color:var(--red)}
-
-/* ---------------- FOOTER ---------------- */
-footer{background:var(--ink);color:var(--paper);padding:60px 0 40px}
-.foot-top{display:flex;justify-content:space-between;align-items:flex-start;gap:30px;flex-wrap:wrap;padding-bottom:40px;border-bottom:2px solid #2A2A2A}
-.foot-big{font-family:"Anton",sans-serif;text-transform:uppercase;font-size:clamp(40px,6vw,84px);line-height:.9;letter-spacing:.006em}
-.foot-c{font-family:"JetBrains Mono",monospace;font-size:13px;line-height:2;color:#B8B2A6}
-.foot-c a:hover{color:var(--red)}
-.foot-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;padding-top:26px;font-family:"JetBrains Mono",monospace;font-size:11.5px;color:#7E7A6E;text-transform:uppercase;letter-spacing:.04em}
-
-/* floating wa */
-.wa{position:fixed;right:22px;bottom:22px;z-index:150;width:60px;height:60px;background:var(--red);border:2px solid var(--ink);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;color:#fff;transition:.15s var(--ease)}
-.wa svg{width:30px;height:30px}
-.wa:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--ink)}
-
-/* reveal */
-.rev{opacity:0;transform:translateY(30px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
-.rev.in{opacity:1;transform:none}
-.rev.d1{transition-delay:.07s}.rev.d2{transition-delay:.14s}.rev.d3{transition-delay:.21s}
-
-@media(prefers-reduced-motion:reduce){
-  *{animation-duration:.001ms!important;transition-duration:.001ms!important;animation-iteration-count:1!important}
-  .rev{opacity:1;transform:none}
-  .hero h1 .ln span,.hero-sub,.hero-btns,.receipt{opacity:1!important;transform:none!important}
-}
-
-/* ---------------- RESPONSIVE ---------------- */
-@media(max-width:1000px){
-  .hero-grid{grid-template-columns:1fr}
-  .hero-left{padding:30px 0 36px}
-  .hero-right{border-left:none;border-top:2px solid var(--ink);padding:36px 0}
-  .stats{grid-template-columns:1fr 1fr}
-  .stat:nth-child(2){border-right:none}
-  .stat:nth-child(-n+2){border-bottom:2px solid var(--ink)}
-  .case{grid-template-columns:1fr}
-  .case-l{border-right:none;border-bottom:2px solid var(--ink)}
-  .trust{grid-template-columns:1fr 1fr}
-  .trust div:nth-child(2){border-right:none}
-  .trust div:nth-child(-n+2){border-bottom:2px solid #2A2A2A}
-  .tg{grid-template-columns:1fr}
-  .tq:first-child{border-right:none;border-bottom:2px solid var(--ink)}
-  .nav-links{display:none}
-  .ham{display:flex}
-  .srv-in{grid-template-columns:64px 1fr;gap:18px}
-  .srv-arrow{display:none}
-}
-@media(max-width:560px){
-  .sec{padding:64px 0}
-  .stats{grid-template-columns:1fr}
-  .stat{border-right:none;border-bottom:2px solid var(--ink)}
-  .stat:last-child{border-bottom:none}
-  .trust{grid-template-columns:1fr}
-  .trust div{border-right:none;border-bottom:2px solid #2A2A2A}
-  .case-r{grid-template-columns:1fr 1fr}
-  .marq-it{font-size:22px}
-  .award{flex-direction:column;text-align:center}
-  .wa{display:none}
-}
-</style>
 </head>
 <body>
+<div class="bg-fx"><div class="aurora"><b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b></div></div>
+<div class="grid-fx"></div>
+<div class="noise-fx"></div>
+<div class="spotlight" id="spot"></div>
 <div class="scroll-bar" id="sbar"></div>
 
-<nav><div class="nav-in">
+<nav id="nav"><div class="nav-inner">
   <div class="nav-logo"><a href="index.html"><img src="cyberdesign-logo.webp" alt="Cyber Design Agency Karachi"></a></div>
   <div class="nav-links">
     <a href="index.html" class="cur">Home</a>
-    <a href="about-us.html">About</a>
+    <a href="about-us.html">About Us</a>
     <a href="services.html">Services</a>
-    <a href="case-studies.html">Work</a>
+    <a href="case-studies.html">Case Studies</a>
     <a href="contact.html">Contact</a>
-    <a href="contact.html" class="nav-cta">Book Audit ↗</a>
+    <a href="contact.html" class="nav-cta">Book 15-Min Audit →</a>
   </div>
   <div class="ham" id="ham"><span></span><span></span><span></span></div>
 </div></nav>
-<div class="mob" id="mob">
+<div class="mob-menu" id="mob">
   <a href="index.html" class="cur">Home</a>
-  <a href="about-us.html">About</a>
+  <a href="about-us.html">About Us</a>
   <a href="services.html">Services</a>
-  <a href="case-studies.html">Work</a>
+  <a href="case-studies.html">Case Studies</a>
   <a href="contact.html">Contact</a>
-  <a href="contact.html" class="mob-cta">Book Audit ↗</a>
+  <a href="contact.html" class="mob-cta">Book 15-Min Audit →</a>
 </div>
 
 <!-- ===== HERO ===== -->
-<section class="hero">
- <div class="wrap">
-  <div class="hero-top">
-   <div class="hero-tag"><span class="dot"></span>Karachi · Pakistan — Est. 2011</div>
-   <div class="hero-tag">Meta Ads · Shopify · Creative</div>
-  </div>
-  <div class="hero-grid">
-   <div class="hero-left">
-    <h1>
-     <span class="ln"><span>We don't</span></span>
-     <span class="ln"><span>just run ads.</span></span>
-     <span class="ln"><span>We build <em class="hl" style="font-style:normal">growth</em></span></span>
-     <span class="ln"><span><em class="hl" style="font-style:normal">machines.</em></span></span>
-    </h1>
-    <p class="hero-sub">A full-stack Meta ads + Shopify agency that designs the store, produces the creative, and scales it profitably — with results you can verify, screen by screen.</p>
-    <div class="hero-btns">
-     <a class="btn btn-red" href="contact.html">Book Free Audit
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
-     <a class="btn btn-out" href="case-studies.html">See The Results</a>
-    </div>
+<section class="pt-hero">
+ <div class="wrap"><div class="hero-grid">
+  <div class="hero">
+   <div class="hero-badge"><span class="dot"></span>Karachi · Pakistan · Since 2011</div>
+   <h1 id="heroH1">
+     <span class="word" style="animation-delay:.05s">We</span> <span class="word" style="animation-delay:.12s">don't</span> <span class="word" style="animation-delay:.19s">just</span> <span class="word" style="animation-delay:.26s">run</span> <span class="word" style="animation-delay:.33s">ads.</span><br>
+     <span class="word" style="animation-delay:.42s">We</span> <span class="word" style="animation-delay:.49s">build</span> <span class="word" style="animation-delay:.56s"><em>growth</em></span> <span class="word" style="animation-delay:.63s"><em>machines.</em></span>
+   </h1>
+   <p class="hero-sub">A full-stack Meta ads + Shopify agency that designs the store, produces the creative, and scales it profitably — with results you can verify, screen by screen.</p>
+   <div class="hero-btns">
+    <a class="btn btn-pri magnetic" href="contact.html">Book Free Audit
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    <a class="btn btn-sec magnetic" href="case-studies.html">See Results</a>
    </div>
-   <div class="hero-right">
-    <div class="receipt">
-     <div class="rc-top"><span>Meta Ads Manager</span><span class="v">Verified</span></div>
-     <div class="rc-body">
-      <div class="rc-title">// Lifetime Account Summary</div>
-      <div class="rc-row big"><span class="l">Ad Spend Managed</span><span class="n" data-count="160" data-prefix="PKR " data-suffix="M+">PKR 0M+</span></div>
-      <div class="rc-row"><span class="l">Purchases Generated</span><span class="n" data-count="295" data-suffix="K+">0K+</span></div>
-      <div class="rc-row"><span class="l">Peak ROAS</span><span class="n" data-count="14" data-suffix="×">0×</span></div>
-      <div class="rc-total"><span class="l">Sales Tracked</span><span class="n" data-count="930" data-prefix="PKR " data-suffix="M+">PKR 0M+</span></div>
+   <div class="hero-foot">
+    <span class="stars">★★★★★</span>
+    <span class="ht">Tech Behemoths Award Winner 2024 · 500+ brands served</span>
+   </div>
+  </div>
+
+  <div style="position:relative">
+   <div class="hcard float">
+    <div class="hc-bar"><div class="dots"><i></i><i></i><i></i></div><div class="lbl">meta-ads-manager · verified</div><div class="live">Live</div></div>
+    <div class="hc-body">
+     <div class="hc-stats">
+      <div class="hc-stat hl"><div class="n" data-count="160" data-prefix="PKR "><span class="num">0</span><span class="sup">M+</span></div><div class="l">Ad Spend Managed</div></div>
+      <div class="hc-stat"><div class="n" data-count="295"><span class="num">0</span><span class="sup">K+</span></div><div class="l">Purchases</div></div>
+      <div class="hc-stat"><div class="n" data-count="930" data-prefix="PKR "><span class="num">0</span><span class="sup">M+</span></div><div class="l">Sales Tracked</div></div>
+      <div class="hc-stat"><div class="n" data-count="14"><span class="num">0</span><span class="sup">×</span></div><div class="l">Peak ROAS</div></div>
      </div>
-     <div class="rc-foot">★ Flagship e-commerce accounts · Pakistan</div>
+     <div class="hc-chart">
+      <div class="ch-top"><span class="t">Monthly revenue</span><span class="v">▲ +218%</span></div>
+      <div class="spark" id="spark"></div>
+     </div>
+     <div class="hc-verified">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      Verified live from Meta Ads Manager · Flagship e-commerce accounts
+     </div>
     </div>
    </div>
+   <div class="chip-float chip-1">
+     <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+     <div><div class="ct">11.26×</div><div class="cl">Best ROAS</div></div>
+   </div>
+   <div class="chip-float chip-2">
+     <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg></div>
+     <div><div class="ct">2024</div><div class="cl">Award Winner</div></div>
+   </div>
   </div>
- </div>
+ </div></div>
 </section>
 
 <!-- ===== MARQUEE ===== -->
-<div class="marq"><div class="marq-tr" id="marq">
-  <span class="marq-it"><span><span class="st">160M+</span>&nbsp;Ad Spend</span><span class="sep">/</span><span><span class="st">295K+</span>&nbsp;Purchases</span><span class="sep">/</span><span><span class="st">930M+</span>&nbsp;Sales</span><span class="sep">/</span><span><span class="st">11.26×</span>&nbsp;Peak ROAS</span><span class="sep">/</span><span><span class="st">500+</span>&nbsp;Brands</span><span class="sep">/</span><span><span class="st">Award</span>&nbsp;Winner 2024</span><span class="sep">/</span></div></div>
+<div class="marquee"><div class="mq-track" id="mq">
+  <span class="mq-item"><strong>PKR 160M+</strong> ad spend managed<span class="dot"></span></span>
+  <span class="mq-item"><strong>295,000+</strong> purchases generated<span class="dot"></span></span>
+  <span class="mq-item"><strong>PKR 930M+</strong> in e-commerce sales<span class="dot"></span></span>
+  <span class="mq-item"><strong>Up to 11.26×</strong> ROAS achieved<span class="dot"></span></span>
+  <span class="mq-item"><strong>500+</strong> brands served since 2011<span class="dot"></span></span>
+  <span class="mq-item"><strong>Tech Behemoths</strong> Award Winner 2024<span class="dot"></span></span>
+</div></div>
 
-<!-- ===== BIG STATS ===== -->
-<section class="sec">
+<!-- ===== SERVICES ===== -->
+<section>
  <div class="wrap">
-  <div class="eyebrow rev">Proof of results — pulled from Meta Ads Manager</div>
-  <div class="stats">
-   <div class="stat red rev"><div class="n">160<span class="sup">M+</span></div><div class="l">PKR Ad Spend Managed</div></div>
-   <div class="stat rev d1"><div class="n">295<span class="sup">K+</span></div><div class="l">Purchases Generated</div></div>
-   <div class="stat rev d2"><div class="n">930<span class="sup">M+</span></div><div class="l">PKR Meta-Tracked Sales</div></div>
-   <div class="stat rev d3"><div class="n">5–14<span class="sup">×</span></div><div class="l">ROAS Range Achieved</div></div>
+  <div class="eyebrow rev">What We Do</div>
+  <h2 class="title rev">One team. <em>Every layer of growth.</em></h2>
+  <p class="sub rev">Most agencies buy media. We design the store, shape the brand, produce the creative and run the ads — one team, one funnel, higher returns.</p>
+  <div class="svc-grid">
+   <a class="svc rev d1" href="meta-ads-agency-karachi.html">
+     <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+     <h3>Meta Performance Marketing</h3>
+     <p>Full-funnel Facebook &amp; Instagram advertising — strategy, audience architecture, media buying, daily optimisation and transparent reporting engineered around real ROAS.</p>
+     <span class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+   </a>
+   <a class="svc rev d2" href="shopify-development-karachi.html">
+     <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+     <h3>Shopify &amp; Web Development</h3>
+     <p>High-converting, mobile-first Shopify stores built from scratch. Speed, UX and CRO baked in from day one — because traffic only pays if the store converts.</p>
+     <span class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+   </a>
+   <a class="svc rev d1" href="branding-agency-karachi.html">
+     <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8H20l-4.9 3.6 1.9 5.8L12 14.6 7 18.2l1.9-5.8L4 8.8h6.1z"/></svg></div>
+     <h3>Branding &amp; Strategy</h3>
+     <p>Distinct brand identities, positioning and visual systems that make every ad rupee work harder. When the brand is right, scaling becomes cheaper.</p>
+     <span class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+   </a>
+   <a class="svc rev d2" href="creative-photography-karachi.html">
+     <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><polygon points="10 8 15 11 10 14 10 8" fill="currentColor" stroke="none"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+     <h3>Creative, Photography &amp; AI Video</h3>
+     <p>Scroll-stopping product creative, short-form video and AI content built for the feed and proven to convert. In-house, account-specific — no recycled templates.</p>
+     <span class="svc-link">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+   </a>
   </div>
  </div>
 </section>
 
-<!-- ===== SERVICES ===== -->
-<section class="sec sec--ink" style="padding-bottom:0">
+<!-- ===== PROOF ===== -->
+<section style="padding-top:0">
  <div class="wrap">
-  <div class="eyebrow rev">What we do</div>
-  <h2 class="head rev">One team.<br><span class="red">Every layer</span> of growth.</h2>
-  <p class="lead rev">Most agencies buy media. We design the store, shape the brand, produce the creative and run the ads — one team, one funnel, higher returns.</p>
+  <div class="eyebrow rev">Proof of Results</div>
+  <h2 class="title rev">Numbers from <em>real accounts.</em></h2>
+  <p class="sub rev">Every figure below is pulled directly from Meta Ads Manager. No projections — verified data across our flagship Pakistan e-commerce accounts.</p>
+  <div class="proof-grid">
+   <div class="proof hl rev d1"><div class="n" data-count="160" data-prefix="PKR "><span class="num">0</span><span class="sup">M+</span></div><div class="l">Ad Spend Managed</div></div>
+   <div class="proof rev d2"><div class="n" data-count="295"><span class="num">0</span><span class="sup">K+</span></div><div class="l">Purchases Generated</div></div>
+   <div class="proof rev d3"><div class="n" data-count="930" data-prefix="PKR "><span class="num">0</span><span class="sup">M+</span></div><div class="l">Meta-Tracked Sales</div></div>
+   <div class="proof rev d4"><div class="n">5–14<span class="sup">×</span></div><div class="l">ROAS Range</div></div>
+  </div>
  </div>
- <div class="wrap" style="margin-top:54px;padding-left:0;padding-right:0">
-  <div style="border-top:2px solid #2A2A2A">
-   <a class="srv" href="meta-ads-agency-karachi.html"><div class="srv-in"><div class="srv-no">01 / META</div><div class="srv-mid"><h3>Meta Performance Marketing</h3><p>Full-funnel Facebook &amp; Instagram advertising — strategy, audience architecture, media buying, daily optimisation and transparent reporting engineered around real ROAS.</p></div><div class="srv-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
-   <a class="srv" href="shopify-development-karachi.html"><div class="srv-in"><div class="srv-no">02 / SHOPIFY</div><div class="srv-mid"><h3>Shopify &amp; Web Development</h3><p>High-converting, mobile-first Shopify stores built from scratch. Speed, UX and CRO baked in from day one — because traffic only pays if the store converts.</p></div><div class="srv-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
-   <a class="srv" href="branding-agency-karachi.html"><div class="srv-in"><div class="srv-no">03 / BRAND</div><div class="srv-mid"><h3>Branding &amp; Strategy</h3><p>Distinct brand identities, positioning and visual systems that make every ad rupee work harder. When the brand is right, scaling becomes cheaper.</p></div><div class="srv-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
-   <a class="srv" href="creative-photography-karachi.html"><div class="srv-in"><div class="srv-no">04 / CREATIVE</div><div class="srv-mid"><h3>Creative, Photography &amp; AI Video</h3><p>Scroll-stopping product creative, short-form video and AI content built for the feed and proven to convert. In-house, account-specific — no recycled templates.</p></div><div class="srv-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+</section>
+
+<!-- ===== TRUST ===== -->
+<section style="padding-top:0">
+ <div class="wrap">
+  <div class="eyebrow rev">Trusted Listings &amp; Awards</div>
+  <h2 class="title rev">Recognised by the <em>industry's top platforms.</em></h2>
+  <div class="trust-grid">
+   <div class="trust rev d1"><div class="tl">Top eCommerce Agency</div><div class="tn" style="color:#E67E22;font-size:22px">sl | sortlist</div><div class="ts">Verified Agency</div></div>
+   <div class="trust rev d2"><div class="tl">Top Web Developers</div><div class="tn" style="color:#1DB0C1;font-size:17px">■ Tech Behemoths</div><div class="ts">Trusted &amp; Verified</div></div>
+   <div class="trust rev d3"><div class="tl">Top Design Agency</div><div class="tn" style="font-size:18px">✦ DesignRush</div><div class="ts">Listed Agency</div></div>
+   <div class="trust rev d4"><div class="tl">Top Web Design</div><div class="tn" style="font-size:20px"><span style="color:var(--p)">●</span> Clutch</div><div class="ts">Firms That Deliver</div></div>
+  </div>
+  <div class="award rev">
+    <div class="ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg></div>
+    <div><div class="at">Tech Behemoths Award Winner — 2024</div><div class="ad">Recognised as one of the most innovative digital agencies in Pakistan by Tech Behemoths — a global directory of verified IT service providers evaluated on quality, reliability and client outcomes.</div></div>
   </div>
  </div>
 </section>
 
 <!-- ===== CASE STUDIES ===== -->
-<section class="sec">
+<section style="padding-top:0">
  <div class="wrap">
-  <div class="eyebrow rev">Client success stories</div>
-  <h2 class="head rev">Three brands.<br><span class="red">Verified</span> numbers.</h2>
-  <div class="cases">
-   <div class="case rev">
-    <div class="case-l">
-     <div class="case-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="1"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Client withheld · Confidential</div>
-     <h3>Flagship Footwear Brand</h3>
-     <div class="case-chips"><span>Shopify</span><span>Meta Ads</span><span>17 Months</span></div>
-    </div>
-    <div class="case-r">
-     <div class="cstat"><div class="n">200,881</div><div class="l">Purchases</div></div>
-     <div class="cstat"><div class="n">6.01<span class="g">×</span></div><div class="l">Blended ROAS</div></div>
-     <div class="cstat"><div class="n">644<span class="g">M</span></div><div class="l">PKR Sales</div></div>
-     <div class="cstat"><div class="n">21,921</div><div class="l">Peak Mo. Orders</div></div>
-    </div>
-   </div>
-   <div class="case rev">
-    <div class="case-l">
-     <div class="case-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="1"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Client withheld · Confidential</div>
-     <h3>Fashion E-commerce Brand</h3>
-     <div class="case-chips"><span>Shopify Redesign</span><span>Meta Ads</span></div>
-    </div>
-    <div class="case-r">
-     <div class="cstat"><div class="n">6,539</div><div class="l">Purchases</div></div>
-     <div class="cstat"><div class="n">11.26<span class="g">×</span></div><div class="l">ROAS</div></div>
-     <div class="cstat"><div class="n">13.1<span class="g">M</span></div><div class="l">PKR Sales</div></div>
-     <div class="cstat"><div class="n">2,018</div><div class="l">Peak Mo. Orders</div></div>
-    </div>
-   </div>
-   <div class="case rev">
-    <div class="case-l">
-     <div class="case-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="1"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Client withheld · Confidential</div>
-     <h3>Women's Fashion Brand</h3>
-     <div class="case-chips"><span>Shopify Rebuild</span><span>Meta Ads</span></div>
-    </div>
-    <div class="case-r">
-     <div class="cstat"><div class="n">3,632</div><div class="l">Purchases</div></div>
-     <div class="cstat"><div class="n">7.74<span class="g">×</span></div><div class="l">ROAS</div></div>
-     <div class="cstat"><div class="n">6.56<span class="g">M</span></div><div class="l">PKR Sales</div></div>
-     <div class="cstat"><div class="n">1,028</div><div class="l">Peak Mo. Orders</div></div>
-    </div>
-   </div>
-  </div>
-  <div style="margin-top:30px"><a class="btn btn-ink" href="case-studies.html">Read Full Case Studies
-   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
- </div>
-</section>
-
-<!-- ===== TRUST / AWARDS ===== -->
-<section class="sec sec--ink">
- <div class="wrap">
-  <div class="eyebrow rev">Trusted listings &amp; awards</div>
-  <h2 class="head rev">Recognised by the<br><span class="red">platforms that matter.</span></h2>
-  <div class="trust rev">
-   <div><div class="tl">Top eCommerce Agency</div><div class="tn" style="color:#E67E22">sl | sortlist</div><div class="ts">Verified Agency</div></div>
-   <div><div class="tl">Top Web Developers</div><div class="tn" style="color:#1DB0C1">■ Tech Behemoths</div><div class="ts">Trusted &amp; Verified</div></div>
-   <div><div class="tl">Top Design Agency</div><div class="tn">✦ DesignRush</div><div class="ts">Listed Agency</div></div>
-   <div><div class="tl">Top Web Design</div><div class="tn"><span style="color:var(--red)">●</span> Clutch</div><div class="ts">Firms That Deliver</div></div>
-  </div>
-  <div class="award rev">
-   <div class="ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg></div>
-   <div><div class="at">Tech Behemoths Award Winner — 2024</div><div class="ad">Recognised as one of the most innovative digital agencies in Pakistan — a global directory of verified IT service providers evaluated on quality, reliability and client outcomes.</div></div>
+  <div class="eyebrow rev">Client Success Stories</div>
+  <h2 class="title rev">Three brands. <em>Proven results.</em></h2>
+  <div class="cs-grid">
+   <a class="cs rev d1" href="case-studies.html">
+     <div class="cs-brand">Flagship Footwear Brand</div>
+     <div class="cs-conf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Client identity withheld · Confidential</div>
+     <div class="cs-tags"><span>Shopify</span><span>Meta Ads</span></div>
+     <div class="cs-stats"><div class="cs-stat"><div class="n">200,881</div><div class="l">Purchases (17 mo)</div></div><div class="cs-stat"><div class="n">6.01<span class="g">×</span></div><div class="l">Blended ROAS</div></div><div class="cs-stat"><div class="n">PKR 644<span class="g">M</span></div><div class="l">Sales</div></div><div class="cs-stat"><div class="n">21,921</div><div class="l">Peak Monthly Orders</div></div></div>
+   </a>
+   <a class="cs rev d2" href="case-studies.html">
+     <div class="cs-brand">Fashion E-commerce Brand</div>
+     <div class="cs-conf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Client identity withheld · Confidential</div>
+     <div class="cs-tags"><span>Shopify Redesign</span><span>Meta Ads</span></div>
+     <div class="cs-stats"><div class="cs-stat"><div class="n">6,539</div><div class="l">Purchases (4 mo)</div></div><div class="cs-stat"><div class="n">11.26<span class="g">×</span></div><div class="l">ROAS</div></div><div class="cs-stat"><div class="n">PKR 13.1<span class="g">M</span></div><div class="l">Sales</div></div><div class="cs-stat"><div class="n">2,018</div><div class="l">Peak Monthly Orders</div></div></div>
+   </a>
+   <a class="cs rev d3" href="case-studies.html">
+     <div class="cs-brand">Women's Fashion Brand</div>
+     <div class="cs-conf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Client identity withheld · Confidential</div>
+     <div class="cs-tags"><span>Shopify Rebuild</span><span>Meta Ads</span></div>
+     <div class="cs-stats"><div class="cs-stat"><div class="n">3,632</div><div class="l">Purchases (4 mo)</div></div><div class="cs-stat"><div class="n">7.74<span class="g">×</span></div><div class="l">ROAS</div></div><div class="cs-stat"><div class="n">PKR 6.56<span class="g">M</span></div><div class="l">Sales</div></div><div class="cs-stat"><div class="n">1,028</div><div class="l">Peak Monthly Orders</div></div></div>
+   </a>
   </div>
  </div>
 </section>
 
 <!-- ===== TESTIMONIALS ===== -->
-<section class="sec">
+<section style="padding-top:0">
  <div class="wrap">
-  <div class="eyebrow rev">In their words</div>
-  <h2 class="head rev">What clients<br><span class="red">actually say.</span></h2>
-  <div class="tg rev">
-   <div class="tq"><div class="stars">★★★★★</div><blockquote>"Cyber Design transformed our brand with an outstanding Shopify website, branding &amp; content marketing — resulting in increased daily orders &amp; customer engagement."</blockquote><div class="auth"><div class="av">SS</div><div><div class="nm">Syed Safi Ullah</div><div class="ro">CEO, E-commerce Footwear Brand</div></div></div></div>
-   <div class="tq"><div class="stars">★★★★★</div><blockquote>"Their professionalism and attention to detail exceeded our expectations. They truly elevated our company's digital presence. Highly recommended."</blockquote><div class="auth"><div class="av">ZA</div><div><div class="nm">Zahid Anwer</div><div class="ro">CEO, Perfect Gloves</div></div></div></div>
+  <div class="eyebrow rev">In Their Words</div>
+  <h2 class="title rev">What clients <em>actually say.</em></h2>
+  <div class="testi-grid">
+   <div class="testi rev d1"><div class="q">“</div><div class="stars">★★★★★</div><blockquote>Cyber Design transformed our brand with an outstanding Shopify website, branding &amp; content marketing — resulting in increased daily orders &amp; customer engagement.</blockquote><div class="auth"><div class="av">SS</div><div><div class="nm">Syed Safi Ullah</div><div class="ro">CEO, E-commerce Footwear Brand</div></div></div></div>
+   <div class="testi rev d2"><div class="q">“</div><div class="stars">★★★★★</div><blockquote>Their professionalism and attention to detail exceeded our expectations. They truly elevated our company's digital presence. Highly recommended.</blockquote><div class="auth"><div class="av">ZA</div><div><div class="nm">Zahid Anwer</div><div class="ro">CEO, Perfect Gloves</div></div></div></div>
   </div>
  </div>
 </section>
 
 <!-- ===== CTA ===== -->
-<section class="sec sec--red">
- <div class="wrap"><div class="cta-wrap">
-  <h2>Ready to see<br>the receipts?</h2>
+<section style="padding-top:0;padding-bottom:110px">
+ <div class="wrap"><div class="cta rev">
+  <h2>Ready to see what your store is<br>actually capable of?</h2>
   <p>We'll review your ad account and store in a free 15-minute audit — no pitch, no fluff. Just an honest breakdown of where your next rupees of growth are hiding.</p>
   <div class="cta-btns">
-   <a class="btn btn-ink" href="contact.html">Book Free 15-Min Audit
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
-   <a class="btn btn-out" href="https://wa.me/923008244978" target="_blank" rel="noopener">WhatsApp Us</a>
+   <a class="btn btn-pri magnetic" href="contact.html">Book Free 15-Min Audit
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+   <a class="btn btn-wa magnetic" href="https://wa.me/923008244978" target="_blank" rel="noopener">
+     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.488-.916zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413z"/></svg>
+     WhatsApp Us</a>
   </div>
  </div></div>
 </section>
 
-<!-- ===== FOOTER ===== -->
-<footer>
- <div class="wrap">
-  <div class="foot-top">
-   <div class="foot-big">Let's build<br>your <span style="color:var(--red)">growth machine.</span></div>
-   <div class="foot-c">
-    <a href="mailto:support@cyberdesignpk.com">support@cyberdesignpk.com</a><br>
-    <a href="tel:+923008244978">+92 300 8244 978</a><br>
-    Karachi, Pakistan<br>
-    Tech Behemoths Award Winner 2024
-   </div>
-  </div>
-  <div class="foot-bot">
-   <div>© 2025 Cyber Design — All rights reserved</div>
-   <div>Meta Ads · Shopify · Branding · Creative</div>
-  </div>
- </div>
-</footer>
+<footer><div class="foot">
+  <div class="nav-logo"><a href="index.html"><img src="cyberdesign-logo.webp" alt="Cyber Design" style="height:32px;width:auto;filter:brightness(1.1)" loading="lazy"></a></div>
+  <div class="fr">support@cyberdesignpk.com &nbsp;·&nbsp; +92 300 8244 978 &nbsp;·&nbsp; Karachi, Pakistan &nbsp;·&nbsp; © 2025 Cyber Design</div>
+</div></footer>
 
-<a class="wa" href="https://wa.me/923008244978" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
- <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.488-.916zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413z"/></svg>
+<a class="wa-float magnetic" href="https://wa.me/923008244978" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.488-.916zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413z"/></svg>
 </a>
 
-<script>
-var sbar=document.getElementById('sbar');
-window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-window.innerHeight;sbar.style.width=(h>0?window.scrollY/h*100:0)+'%';},{passive:true});
-var ham=document.getElementById('ham'),mob=document.getElementById('mob');
-ham.addEventListener('click',function(){ham.classList.toggle('act');mob.classList.toggle('open')});
-mob.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){ham.classList.remove('act');mob.classList.remove('open')})});
-var marq=document.getElementById('marq');marq.innerHTML+=marq.innerHTML;
-var RM=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-function count(el){
-  var t=+el.getAttribute('data-count'),pre=el.getAttribute('data-prefix')||'',suf=el.getAttribute('data-suffix')||'',s=null,d=1500;
-  if(RM){el.textContent=pre+t.toLocaleString()+suf;return;}
-  function step(ts){if(!s)s=ts;var p=Math.min((ts-s)/d,1),e=1-Math.pow(1-p,3);el.textContent=pre+Math.round(t*e).toLocaleString()+suf;if(p<1)requestAnimationFrame(step)}
-  requestAnimationFrame(step);
-}
-var revEls=[].slice.call(document.querySelectorAll('.rev'));
-var countEls=[].slice.call(document.querySelectorAll('[data-count]'));
-var tick=false;
-function check(){tick=false;var vh=innerHeight;
-  revEls=revEls.filter(function(el){var r=el.getBoundingClientRect();if(r.top<vh*0.9&&r.bottom>0){el.classList.add('in');return false;}return true;});
-  countEls=countEls.filter(function(el){var r=el.getBoundingClientRect();if(r.top<vh*0.92&&r.bottom>0){count(el);return false;}return true;});
-}
-function onsc(){if(!tick){tick=true;requestAnimationFrame(check);}}
-window.addEventListener('scroll',onsc,{passive:true});
-window.addEventListener('resize',onsc,{passive:true});
-window.addEventListener('load',check);check();
-</script>
+<script src="app.js"></script>
 </body>
 </html>
